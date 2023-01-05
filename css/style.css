@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+*{
+    margin: 0 auto(); /* 좌우 바깥여백을 자동으로 활당하여 가운데 정렬로 만듬 */
+    padding: 0; /* 안쪽 여백을 0으로 지정 */
+    list-style: none;
+    font-family: "맑은 고딕";
+    color: #333333;
+}
+
+/*위 코드는 전체설정을 지정 함*/
+
+body{
+    width: 1000px;
+    height: 650px;
+    background-color: #ffffff;
+    font-size: 20px;
+}
+/* 위 코드는 body 태그 설정변경, 전체 프레임크기와 배경색, 글자크기를 지정 */
+
+a{
+    text-decoration: none;  /*링크가 걸린 텍스트에 밑줄이 나타나지 않도록 설정*/
+    display: block; /*박스요소를 block 속성으로 표시 */
+}
+
+header{
+    float: left;
+}
+
+.lefttop{
+    float: left;
+    width: 200px;
+    height: 650px;
+    background-color: #eeeeee;
+}
+
+.logo{
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;
+}
+
+.menu{
+    float: left;
+    top: 100px;
+    position: absolute; /*position 속성=> absolute : 부모(조상)요소를 기준으로 배치, relative*/
+    text-align: center;
+    z-index: 1;
+}
+
+.menu>li{
+    float: left;
+    width: 180px;
+}
+
+.menu>li>a{
+    width: 180px;
+    height: 40px;
+    background-color: #333333;
+}
+
+.imgslide{
+    float: right;
+    width: 800px;
+    height: 350px;
+}
+
+.contents{
+    float: right;
+    width: 800px;
+    height: 200px;
+}
+
+.notice{
+    float: left;
+    width: 300px;
+    height: 200px;
+}
+
+.gallery{
+    float: left;
+    width: 300px;
+    height: 200px;
+}
+
+.shortcut{
+    float: right;
+    width: 200px;
+    height: 200px;
+}
+
+
+footer{
+    float: right;
+    width: 800px;
+    height: 100px;
+    background-color: rgba(0, 0, 255, 0.205);
+}
+
+.btlogo{
+    float: left;
+    width: 200px;
+    height: 100px;
+}
+
+.bottom{
+    float: right;
+    width: 600px;
+    height: 100px;
+}
+
+.btmenu{
+    float: right;
+    width: 600px;
+    height: 50px;
+}
+
+.copy{
+    float: right;
+    width: 600px;
+    height: 50px;
+}
