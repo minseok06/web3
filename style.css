@@ -1,133 +1,115 @@
 @charset "utf-8";
+/* CSS Document */
 
 *{
-    margin: 0 auto(); /*좌우 바깥여백을 자동으로 할당하여 가운데 정렬로 만듬*/
-    padding: 0; /*안쪽 여백을 0으로 지정*/
-    list-style: none;
-    font-family: "맑은 고딕";
-    color: #333333;
+	margin:0 auto;
+	padding:0;
+	list-style:none;
+	font-family:"맑은 고딕";
+	color:#333333  /* 컬러 가이드: 기본 텍스트의 색 */
 }
-
-/*위 코드는 전체설정을 지정 함*/
-
 body{
-    width: 1000px;
-    height: 650px;
-    background-color: #ffffff;
-    font-size: 20px;
+	width:1000px; /* 와이어프레임 너비 */
+	height:650px; /* 와이어프레임 B+C+D 높이 */
+	background-color:#ffffff; /* 컬러 가이드: 배경색 */
+	font-size:20px;
 }
-/*위 코드는 body 태그 설정변경, 전체 프레임크기와 배경색, 글자크기를 지정*/
-
 a{
-    text-decoration : none;   /*링크가 걸린 텍스트에 밑줄이 나타나지 않도록 설정*/
-    display: block;  /*박스요소를 block 속성으로 표시, 전후 줄바꿈이 들어가 다른 엘리먼트들을 밀어내고 혼자 한줄을 차지 */
+	text-decoration:none;
+	display:block;
 }
-
-header{
-    float:left;    
+header{  /* A영역: 와이어프레임 왼쪽 영역 */
+	float:left;
+    position:absolute;	
 }
-
-.lefttop{
-    float:left;
-    width:200px;
-    height:650px;
-    background-color: #eeeeee;
+.top{    /* 로고+메뉴 영역 */
+	float:left; 
+	width:200px;
+	height:650px;
+	background-color:#eeeeee;
 }
-
 .logo{
-    float: left;
-    width:200px;
-    height :100px;
-    margin-top: 30px;
+	float:left;
+	width:200px;
+	height:40px;
+	margin-top:30px;
+	margin-bottom:30px;
 }
-
 .menu{
-    float:left;
+	float:left;
     top:100px;
-    left: 30px;
-    position:absolute ;   /*position 속성=> absolute : 부모(조상)요소를 기준으로 배치, relative : 요소 자기자신을 기준으로 배치*/
-    text-align: center;
+    left:10px;
+    position:absolute;
+    text-align:center;
     z-index:1;
 }
-
-.navi>ul{
-    float:left;    
-    width:180px;
+.navi>li{
+	float:left;
+	width:180px;
 }
-
-.navi>li>a {
-    width:180px ;
-    height: 40px;
-    line-height: 40px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #333333;
-    color: #ffffff;
+.navi>li>a{
+	width:180px; 
+	height:40px; 
+	line-height:40px; 
+	font-size:16px;
+	font-weight:bold;
+	background-color:#333333;
+	color:#ffffff; 
 }
-
 .navi>li>a:hover{
-    background-color: #eeeeeea4;
-    color: #333333;
+	background-color:#cccccc;
+	color:#000000; 
 }
-
-
-.submenu{
-    float: left;
-    width: 180px;
-    height: 250px;
-    left: 180px;
-    top: -20px;
-    position:absolute ;   /*position 속성=> absolute : 부모(조상)요소를 기준으로 배치, relative : 요소 자기자신을 기준으로 배치*/
-    text-align: center;
-    z-index:1;
-    background-color: #999999;
+.submenu{         
+	float:left;
+	width:180px;
+	height:250px;
+	left:180px;
+	top:-20px; 
+	position:absolute;
+	background-color:#999999;
+	display:none;
+	z-index:1;
 }
-
-.submenu>li>a{
-    width: 180px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #999999;
-    color: #333333;
+.submenu>li>a{    
+	width:180px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	font-weight:bold;
+	background-color:#999999;
+	color:#333333;
 }
-
-.submenu>li>a:hover{
-    background-color: #eeeeee7e;
-    color: rgb(179, 255, 0);
+.submenu>li>a:hover{ 
+	background-color:#cccccc;
+	color:#ffff00;
 }
-
-.imgslide{
-    float: right;
-    width: 800px;
-    height : 350px;
-    position: relative;
-    overflow: hidden;   /*이미지가 크면 지정된 영역만큼만 보여주고 나머지는 숨겨라*/
+.imgslide{        /* B영역:이미지 슬라이드 영역 */
+	float:right;
+	width:800px; /* 이미지 슬라이드 너비 */
+	height:350px; /* 이미지 슬라이드 높이 */
+   	position:relative;
+   	overflow:hidden;
 }
 .slidelist{
-    width: 2400px;
-    height: 350px;
+   	width:2400px;
 }
-
-.slidelist>ul>li{
-    width: 800px;
-    float: left;
+.slidelist ul li{
+   	width:800px;
+   	float:left;
 }
-
 .slidelist span{
-    width: 400px;
-    height: 50px;
-    position: absolute;
-    margin-top: 150px;
-    margin-left: 200px;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-    line-height: 50px;
-    background-color: rgb(40, 40, 30,0.5);
+    width:400px;	
+    height:50px;
+	position:absolute;
+    text-align:center;
+    color:#ffffff;
+    font-weight:bold;
+    line-height:50px;
+    background-color:rgba(40,40,40,0.5);
+ 	margin-left:200px;
+ 	margin-top:150px; 
 }
-
 .contents{  /* C영역: 공지사항+갤러리+바로가기 영역 */
 	float:right;
 	width:800px;
@@ -270,7 +252,7 @@ footer{     /* D영역: 와이어프레임 오른쪽 하단 영역 */
 	margin-top:30px;
 	margin-left:20px;
 }
-.bottom{            /* btmenu와 copy 묶어줌 */
+.site{            /* btmenu와 copy 묶어줌 */
 	float:right;
 	width:600px;  /* 하단 메뉴 + Copyright 너비 */
 	height:100px; /* 하단 메뉴 + Copyright 높이 */
